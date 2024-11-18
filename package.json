@@ -1,0 +1,24 @@
+{
+  "name": "ai-sdk-base64-demo",
+  "version": "0.0.0",
+  "type": "module",
+  "module": "src/index.js",
+  "scripts": {
+    "start": "node --max-old-space-size=50 --env-file .env ./dist/index.js",
+    "build": "tsc && cp ./src/image.png ./dist"
+  },
+  "dependencies": {
+    "@ai-sdk/openai": "^0.0.72",
+    "ai": "^3.4.33"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "typescript": "^5.6.3"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "@ai-sdk/provider-utils@1.0.22": "patches/@ai-sdk__provider-utils@1.0.22.patch"
+    }
+  }
+}
